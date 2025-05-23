@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%; /* #0f1419 */
+  --foreground: 0 0% 98%; /* #fafafa */
+  --muted: 240 3.7% 15.9%; /* #27272a */
+  --muted-foreground: 240 5% 64.9%; /* #a1a1aa */
+  --popover: 240 10% 3.9%; /* #0f1419 */
+  --popover-foreground: 0 0% 98%; /* #fafafa */
+  --card: 240 10% 3.9%; /* #0f1419 */
+  --card-foreground: 0 0% 98%; /* #fafafa */
+  --border: 240 3.7% 15.9%; /* #27272a */
+  --input: 240 3.7% 15.9%; /* #27272a */
+  --primary: 262 83% 58%; /* #8b5cf6 */
+  --primary-foreground: 210 40% 98%; /* #f8fafc */
+  --secondary: 240 3.7% 15.9%; /* #27272a */
+  --secondary-foreground: 0 0% 98%; /* #fafafa */
+  --accent: 240 3.7% 15.9%; /* #27272a */
+  --accent-foreground: 0 0% 98%; /* #fafafa */
+  --destructive: 0 62.8% 30.6%; /* #7f1d1d */
+  --destructive-foreground: 0 0% 98%; /* #fafafa */
+  --ring: 262 83% 58%; /* #8b5cf6 */
+  --radius: 0.5rem;
+  
+  /* Custom Nostr colors */
+  --nostr-primary: 262 83% 58%; /* #8b5cf6 */
+  --nostr-secondary: 240 80% 64%; /* #6366f1 */
+  --nostr-accent: 160 84% 39%; /* #10b981 */
+  --nostr-warning: 43 96% 56%; /* #f59e0b */
+  --nostr-danger: 0 84% 60%; /* #ef4444 */
+}
+
+.dark {
+  --background: 240 10% 3.9%; /* #0f1419 */
+  --foreground: 0 0% 98%; /* #fafafa */
+  --muted: 240 3.7% 15.9%; /* #27272a */
+  --muted-foreground: 240 5% 64.9%; /* #a1a1aa */
+  --popover: 240 10% 3.9%; /* #0f1419 */
+  --popover-foreground: 0 0% 98%; /* #fafafa */
+  --card: 240 10% 3.9%; /* #0f1419 */
+  --card-foreground: 0 0% 98%; /* #fafafa */
+  --border: 240 3.7% 15.9%; /* #27272a */
+  --input: 240 3.7% 15.9%; /* #27272a */
+  --primary: 262 83% 58%; /* #8b5cf6 */
+  --primary-foreground: 210 40% 98%; /* #f8fafc */
+  --secondary: 240 3.7% 15.9%; /* #27272a */
+  --secondary-foreground: 0 0% 98%; /* #fafafa */
+  --accent: 240 3.7% 15.9%; /* #27272a */
+  --accent-foreground: 0 0% 98%; /* #fafafa */
+  --destructive: 0 62.8% 30.6%; /* #7f1d1d */
+  --destructive-foreground: 0 0% 98%; /* #fafafa */
+  --ring: 262 83% 58%; /* #8b5cf6 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-slate-750 {
+    background-color: rgb(41 50 65);
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounce 2s infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(30 41 59);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(71 85 105);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100 116 139);
+}
